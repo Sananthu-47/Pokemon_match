@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon_Match</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!---     Loading page   -->
+    <div class="container loading-page">
+        <span>Loading...</span>
+    </div>
+    <!--    Game starts here after loading  -->
+    <div class="container game-container">
+        <!--   Game starts with a screen onclick  -->
+        <div class="container start-page overlay">
+            <h1 class="h1-style">Pokemon_Match</h1>
+            <h3 class="click-to-start">Click to start..</h3>
+        </div>
+        <!--      Game holds all items here   -->
+        <div class="container game-page">
+        <!--  Game banner  -->
+            <img src="./Assets/logo.png" id="logo-pokemon" alt="Pokemon">
+            <!--   Game card holds all timer , flips and grid in it   -->
+            <div class="game-card">
+                <!--   Puts this in flrx   -->
+                <div class="score-tracker">
+                    <h4>Time: <span id="time">100</span> </h4>
+                    <h4>Flip: <span id="flip">0</span> </h4>
+                </div>
+                <!--    Game grid id here   -->
+                <div class="game-grid">
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/bulbasaur.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/bulbasaur.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/charizad.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/charizad.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/eve.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/eve.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/pikachu.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/pikachu.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/sparrow.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/sparrow.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/squrtile.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/squrtile.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/totodile.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/totodile.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/unicorn.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="inner">
+                            <div class="front">
+                                <img src="./Assets/pokeBall.png">
+                            </div>
+                            <div class="back">
+                                <img src="./Assets/unicorn.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---    Victory page is here  -->
+        <div class="container victory-page overlay">
+            <h1 class="h1-style">You Won</h1>
+            <h3 class="click-to-start">Click to play again..</h3>
+        </div>
+        <!--      Lost page is here    -->
+        <div class="container lost-page overlay">
+            <h1 class="h1-style">You Lost</h1>
+            <h3 class="click-to-start">Click to retart..</h3>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

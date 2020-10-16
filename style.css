@@ -1,0 +1,254 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+    user-select: none;
+}
+
+:root
+{
+    --main-font-family: 'Nova Square', cursive;
+}
+
+img
+{
+    width: 60px;
+    height: 60px;
+}
+
+.container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.loading-page
+{
+    width: 100%;
+    height: 100%;
+    line-height: 100vh;
+    font-size: 50px;
+    color: beige;
+    display: none;
+    font-family: var(--main-font-family);
+    background-image: radial-gradient(rgb(207, 149, 22) 20%,rgb(196, 115, 9) 60%);
+}
+
+.game-container
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    font-family: var(--main-font-family);
+}
+
+.game-container .overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60,60,60,.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.start-page
+{
+    display: flex;
+}
+
+.victory-page , .lost-page
+{
+    display: none;
+}
+
+.h1-style
+{
+    color: white;
+    font-size: 60px;
+}
+
+.click-to-start
+{
+    color: white;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.game-page
+{
+    background-image: radial-gradient(rgb(207, 149, 22) 20%,rgb(196, 115, 9) 60%);
+    display: flex;
+    justify-content: center;
+}
+
+#logo-pokemon
+{
+    width: 300px;
+    height: 80px;
+    margin: 50px;
+}
+
+.game-card
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 420px;
+    max-height: 460px;
+}
+
+.score-tracker
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    border: 1px solid white;
+    height: 60px;
+}
+
+.score-tracker h4
+{
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    line-height: calc(60px / 6);
+}
+
+.game-grid
+{
+    width: 420px;
+    height: 420px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.card
+{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    perspective: 900px;
+    cursor: url('./Assets/pokeball_svg.svg'),default;
+}
+
+.inner
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip
+{
+    transform: rotateY(180deg);
+}
+
+.front
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(197, 96, 28);
+    color: white;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.inner:hover .front img
+{
+    transform: rotateZ(60deg);
+}
+
+.back
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(83, 226, 26);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+
+.matched .back img
+{
+    animation: matchedAnimation 1s infinite alternate ease-in-out;
+}
+
+@keyframes matchedAnimation
+{
+    from{transform: rotateZ(-30deg);}
+    to{transform: rotateZ(30deg);}
+}
+
+@media only screen and (max-width: 420px) {
+    .game-card
+     {
+      width: 100%;
+     }
+     .game-grid
+     {
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 10px;
+     }
+     .card
+     {
+         width: 60px;
+         height: 60px;
+         position: relative;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+     .front , .back
+     {
+         width: 100%;
+         height: 100%;
+     }
+     img
+     {
+         width: 40px;
+         height: 40px;
+     }
+     .score-tracker
+     {
+         margin: 10px 0;
+     }
+}
+
+
+
+
+
+
+
