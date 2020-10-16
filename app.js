@@ -7,6 +7,8 @@ class App
         this.overlay=document.querySelector('.start-page');
         this.victoryPage=document.querySelector('.victory-page');
         this.lostPage=document.querySelector('.lost-page');
+        this.loadingPage=document.querySelector('.loading-page');
+        this.gameContainer=document.querySelector('.game-container');
         this.isPlaying=false;
         this.time=document.getElementById('time');
         this.flip=document.getElementById('flip');
@@ -150,9 +152,18 @@ class App
              card.classList.remove('flip');
         });
     }
+
+    loading()
+    {
+        this.loadingPage.style.display="none";
+        this.gameContainer.style.display="block";
+    }
 }
 
+window.onload =()=>{
+
 const app= new App();
+app.loading();
 
 app.overlay.addEventListener('click',()=>
 {
@@ -191,11 +202,11 @@ app.victoryPage.addEventListener('click',()=>{
     app.initial();
     app.victoryPage.style.display='none';
     app.removeFlips('1');
-})
+});
 
 app.lostPage.addEventListener('click',()=>{
     app.initial();
     app.lostPage.style.display='none';
-})
+});
 
-
+}
