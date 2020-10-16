@@ -10,7 +10,7 @@ class App
         this.isPlaying=false;
         this.time=document.getElementById('time');
         this.flip=document.getElementById('flip');
-        this.currTime=100;
+        this.currTime=30;
         this.count=0;
         this.matches=[];
         this.matchedCards=[];
@@ -89,7 +89,7 @@ class App
     initial()
     {
         this.count=0;
-        this.currTime=100;
+        this.currTime=30;
         this.time.innerText=this.currTime;
         this.flip.innerText=this.count;
         this.removeMatchedClass();
