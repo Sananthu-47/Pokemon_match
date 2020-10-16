@@ -73,8 +73,8 @@ class App
 
     clearArray()
     {
-        app.matches.splice(0,app.matches.length);
-        app.matchedCards.splice(0,app.matchedCards.length);
+        this.matches.splice(0,this.matches.length);
+        this.matchedCards.splice(0,this.matchedCards.length);
     }
 
     addMatch(card)
@@ -133,7 +133,7 @@ class App
             this.isPlaying=false;
             this.status='lost';
             this.stopTimer();
-            app.removeFlips('0');
+            this.removeFlips('0');
             this.lostPage.style.display='flex';
         }
     }
