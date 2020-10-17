@@ -181,7 +181,7 @@ app.cards.forEach((card)=>{
         app.addMatch(card);
         }
 
-        if(app.matches.length>1)
+        if(app.matches.length===2)
         {
             if(app.matches[0]===app.matches[1])
             {
@@ -193,6 +193,10 @@ app.cards.forEach((card)=>{
             {
                 app.removeFlip();
             }
+        }else
+        if(app.matches.length===3)
+        {
+            app.flipCount(app.count--);
         }      
 });
 });
