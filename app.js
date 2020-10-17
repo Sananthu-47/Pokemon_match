@@ -194,10 +194,12 @@ app.cards.forEach((card)=>{
                 app.removeFlip();
             }
         }else
-        if(app.matches.length===3)
+        if(app.matches.length>=3)
         {
+            card.style.pointerEvents='none';
             app.flipCount(app.count--);
         }      
+        card.style.pointerEvents='all';
 });
 });
 
