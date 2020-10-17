@@ -199,7 +199,9 @@ app.cards.forEach((card)=>{
             card.style.pointerEvents='none';
             app.flipCount(app.count--);
         }      
-        card.style.pointerEvents='all';
+        setTimeout(() => {
+            card.style.pointerEvents='all';
+        }, 1000);
 });
 });
 
