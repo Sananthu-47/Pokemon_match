@@ -9,6 +9,7 @@ class App
         this.lostPage=document.querySelector('.lost-page');
         this.loadingPage=document.querySelector('.loading-page');
         this.gameContainer=document.querySelector('.game-container');
+        this.bodyElement=document.querySelector('body');
         this.isPlaying=false;
         this.time=document.getElementById('time');
         this.flip=document.getElementById('flip');
@@ -158,6 +159,14 @@ class App
         this.loadingPage.style.display="none";
         this.gameContainer.style.display="block";
     }
+
+    stopClick()
+    {
+        this.bodyElement.style.pointerEvents='none';
+        setTimeout(() => {
+            this.bodyElement.style.pointerEvents='all';
+        }, 1000);
+    }
 }
 
 window.onload =()=>{
@@ -193,15 +202,9 @@ app.cards.forEach((card)=>{
             {
                 app.removeFlip();
             }
-        }else
-        if(app.matches.length>=3)
-        {
-            card.style.pointerEvents='none';
-            app.flipCount(app.count--);
-        }      
-        setTimeout(() => {
-            card.style.pointerEvents='all';
-        }, 1000);
+            app.stopClick();
+        }   
+    
 });
 });
 

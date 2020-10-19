@@ -207,6 +207,7 @@ img
     to{transform: rotateZ(30deg);}
 }
 
+
 @media only screen and (max-width: 420px) {
     .game-card
      {
